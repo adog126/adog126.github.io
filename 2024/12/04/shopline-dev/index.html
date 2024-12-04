@@ -205,7 +205,8 @@
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<p><img src="/2024/12/04/shopline-dev/webdesign.png"></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>為了提升網站的SEO，網頁商品的介紹皆以ＲＷＤ形式做圖文切版與設計，但在使用這個「電商網站後台」做切版時，發現開發限制非常多。因此開了這個筆記本，當遇到shopline電商後台需要切版時，可以告知業主或是合作商，這個後台原有的限制，使後續專案進行uiux的設計階段更順暢。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>為了提升網站的SEO，現在網頁商品的介紹會希望以ＲＷＤ形式，做圖文切版與設計。在使用這個「電商網站後台」做切版時，發現開發限制非常多。因此開了這個筆記本，當遇到shopline電商後台需要切版時，可以告知業主或是合作商，這個後台原有的限制，使後續專案進行uiux的設計階段更順暢。</p>
+<hr>
 <h4 id="Shopline外掛限制"><a href="#Shopline外掛限制" class="headerlink" title="Shopline外掛限制"></a><strong>Shopline外掛限制</strong></h4><ul>
 <li><strong>一般框架外掛大多不支援</strong>：<br>  目前確認不支援的外掛包含以下幾個大家常用的切版方式<ul>
 <li>Bootstrap 不支援。</li>
@@ -214,6 +215,7 @@
 </ul>
 </li>
 </ul>
+<hr>
 <h4 id="Shopline其他限制"><a href="#Shopline其他限制" class="headerlink" title="Shopline其他限制"></a><strong>Shopline其他限制</strong></h4><ul>
 <li><strong>Shopline 對部分 CSS 語法的限制</strong>：<br>  許多自訂的 CSS 語法可能會被系統屏蔽，導致無法正常顯示!<ul>
 <li><strong>aspect-ratio</strong> 和 <strong>CSS render</strong> 可能會被系統抓住並刪除，特別是在商品頁面中。</li>
@@ -236,6 +238,7 @@
 </ul>
 </li>
 </ul>
+<hr>
 <h4 id="第三方工具的選項"><a href="#第三方工具的選項" class="headerlink" title="第三方工具的選項"></a><strong>第三方工具的選項</strong></h4><ul>
 <li>使用 Google 代碼管理工具（GTM）來安裝第三方工具。</li>
 <li><strong>常用的第三方工具</strong>：<ul>
@@ -246,11 +249,13 @@
 </ul>
 </li>
 </ul>
+<hr>
 <h4 id="自訂-CSS-語法注意事項"><a href="#自訂-CSS-語法注意事項" class="headerlink" title="自訂 CSS 語法注意事項"></a><strong>自訂 CSS 語法注意事項</strong></h4><ul>
 <li>全站透過自訂 CSS 來撰寫對應的顯示語法。自訂 CSS 語法需自行撰寫和維護。</li>
 <li>系統經常更新及優化，因此需要定期檢查顯示是否正常。</li>
 <li>請將撰寫好的語法輸入到「網店設計」&gt;「設計」&gt;「進階設計設定」中的自訂 CSS 欄位，並保存及出版來套用至前台。</li>
 </ul>
+<hr>
 <h4 id="商品頁面建議寫法"><a href="#商品頁面建議寫法" class="headerlink" title="商品頁面建議寫法"></a><strong>商品頁面建議寫法</strong></h4><p>現在電商大多以手機版為主、電腦版為輔，但有些講究的商家會希望手機電腦版可以做到RWD。因此我是以常用的電腦尺寸與手機尺寸設計為主，直接略過平板（如果有時間可以再做）。</p>
 <ul>
 <li>電腦版裝置尺寸：1366 x 768</li>
@@ -264,6 +269,7 @@
 </ul>
 </li>
 </ul>
+<hr>
 <h4 id="撰寫類似bootstrap的grid-system"><a href="#撰寫類似bootstrap的grid-system" class="headerlink" title="撰寫類似bootstrap的grid system"></a><strong>撰寫類似bootstrap的grid system</strong></h4><p>把基礎設定好，在寫網頁的時候就可以非常快速完成，我一開始寫這些時花了3-4個小時trial &amp; error，因為shopline不對商家提供style list，非常麻煩，以下簡單設定，可以提供未來撰寫參考。</p>
 <ul>
 <li><p>html的基本設定在一開始完成<br><code>html &#123;   margin: 0 auto;   padding: 0px;   font-family: &quot;Noto Sans TC&quot;, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, sans-serif;   font-size: 14px;   font-weight: 400;   line-height: 1.5;   color: #ffffff;   &#125;</code></p>
@@ -286,7 +292,11 @@
 <li><p>文字設定建議：rem 為單位，繼承html的設定，例如以下.9rem約11.3px，在手機版當小字排版還行。<br>  <code>p &#123;   font-size: .9rem;   font-weight: 300;   padding: 0px 10px;   margin: 0 0 .5rem 0;   color: #ffffff;   text-align: center;   &#125;</code></p>
 </li>
 </ul>
-<h4 id="結語"><a href="#結語" class="headerlink" title="結語"></a><strong>結語</strong></h4><p>完成以上基礎設定，再根據自己的需求寫出樣式，要調整時，如果渲染不出來，就直接寫在元素的樣式裡，雖然非常醜，但基本上可以完成需求的layout。以上就是辛苦踩雷的坑之筆記。</p>
+<hr>
+<h4 id="結語"><a href="#結語" class="headerlink" title="結語"></a><strong>結語</strong></h4><blockquote>
+<p>看似簡單的基礎設定，大約花了我一個禮拜研究、shopline本身對於這塊的說明並不清楚，很多都需要自己在線上嘗試才能獲得相關經驗</p>
+</blockquote>
+<p>如果初步完成以上基礎設定，就可以再根據自己的需求寫出樣式，要調整時，如果渲染不出來，就直接寫在元素的樣式裡，雖然看起來很醜，但基本上可以完成需求的layout。以上就是辛苦踩雷的坑之筆記。</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
