@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2020/3 | HsinYin Peng</title>
+  <title>Figma-plugins「json to figma」 | HsinYin Peng</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -180,52 +180,158 @@
     </div>
 
     <!-- ============================ Header & Logo bar =========================== -->
-      <!-- ============================ Hero Image =========================== -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-<!---添加圖片連結起始-->
-<div class="archive-menu">
-<a href="/2020/03/16/Website/" target="_blank">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2024-12-27T06:53:29.000Z" itemprop="datePublished">
+          2024-12-27
+      </time>
+    
+    
+    | 
+    <a href='/tags/UIUX/'>UIUX</a>,
+    
+    <a href='/tags/Project/'>Project</a>,
+    
+    <a href='/tags/Web/'>Web</a>
+    
+    
+</span>
+                <h1>Figma-plugins「json to figma」</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p><img src="/2024/12/27/json-to-figma/json05.png" alt="jsontofigma banner"></p>
+<hr>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><blockquote>
+<p>在專案開發的過程中，我們經常遇到以下問題：實際資料與介面設計不符，或者開發階段欄位名稱頻繁修改，導致設計負擔增加、延長迭代時程。此外，與開發溝通對應名稱時，也常因認知不同導致命名混亂，增加了協作成本。</p>
+</blockquote>
+<p>經過團隊多次檢討與優化溝通流程，我們發現了一個非常實用的工具——「json to figma」插件。它能幫助我們在開發階段順利銜接設計與資料，讓溝通更加順暢。</p>
+<p>如果說「google sync sheet」能讓使用者直觀填寫理想的欄位名稱，「json to figma」則能快速生成大量資料，並將其套用在設計介面上，用以驗證介面的設計是否符合實際使用需求。這不僅大幅減少溝通成本，也讓設計與開發的對接更高效。</p>
+<p>推薦給有類似需求的設計與開發團隊，這絕對是一個提升效率的利器！</p>
+<hr>
+<h4 id="工具名稱：Figma-插件-「json-to-figma」"><a href="#工具名稱：Figma-插件-「json-to-figma」" class="headerlink" title="工具名稱：Figma 插件 「json to figma」"></a><strong>工具名稱：Figma 插件 「json to figma」</strong></h4><h4 id="用途"><a href="#用途" class="headerlink" title="用途"></a><strong>用途</strong></h4><p>快速將 JSON 資料同步到 Figma，提升設計與前後端的工作效率。</p>
+<hr>
+<h4 id="使用工具原因"><a href="#使用工具原因" class="headerlink" title="使用工具原因"></a><strong>使用工具原因</strong></h4><ul>
+<li><strong>設計與前後端無痛接軌</strong>：直接將 API 資料轉為介面設計，避免手動複製或錯誤。</li>
+<li><strong>快速製造大量樣本</strong>：檢視各類資料在 UI 上的呈現效果，適合動態資料的設計迭代。</li>
+</ul>
+<hr>
+<h4 id="優點"><a href="#優點" class="headerlink" title="優點"></a><strong>優點</strong></h4><ul>
+<li><strong>低學習成本</strong>：JSON 的 key-value 可直接對應 API，並支援圖片同步。</li>
+<li><strong>批量樣本生成</strong>：一鍵生成多筆資料，快速檢視設計在不同資料組合中的表現。</li>
+<li><strong>樣式自訂</strong>：同步樣式可依需求自行設計，滿足品牌與專案需求。</li>
+<li><strong>非同步資料更新</strong>：資料更新後能自動生成新版本，無需手動修改。</li>
+</ul>
+<hr>
+<h4 id="功能介紹"><a href="#功能介紹" class="headerlink" title="功能介紹"></a><strong>功能介紹</strong></h4><h5 id="1-JSON-文件準備"><a href="#1-JSON-文件準備" class="headerlink" title="1. JSON 文件準備"></a><strong>1. JSON 文件準備</strong></h5><ul>
+<li>將資料轉為 JSON 文件格式，確保 key 與對應的資料結構清晰。</li>
+<li>下載 Figma 插件「JSON to Figma」。</li>
+</ul>
+<h4 id="2-Figma-圖層命名對應-JSON"><a href="#2-Figma-圖層命名對應-JSON" class="headerlink" title="2. Figma 圖層命名對應 JSON"></a><strong>2. Figma 圖層命名對應 JSON</strong></h4><ul>
+<li>在 Figma 上設計表格或卡片風格。</li>
+<li>確認資料欄位（如 <code>address</code>、<code>message</code>），將對應的 Figma 圖層命名為 JSON 的 key。<br><strong>範例</strong>：圖層命名為 <code>address</code>，對應 JSON 中的 <code>address</code>。</li>
+</ul>
+<p><img src="/2024/12/27/json-to-figma/json01.png" alt="同步範例 1"></p>
+<h4 id="3-操作步驟"><a href="#3-操作步驟" class="headerlink" title="3. 操作步驟"></a><strong>3. 操作步驟</strong></h4><ol>
+<li><strong>選擇 Figma 物件</strong>：點擊需要同步的表格或卡片。</li>
+<li><strong>上傳 JSON 文件</strong>：開啟插件，選擇對應的 JSON 文件並勾選需要的資料欄位（key）。</li>
+<li><strong>資料同步</strong>：點擊 <code>Populate Selected</code>，即可在設計中同步真實資料。</li>
+</ol>
+<p><strong>同步前：</strong></p>
+<p><img src="/2024/12/27/json-to-figma/json03.png" alt="同步前"></p>
+<p><strong>同步後：</strong></p>
+<p><img src="/2024/12/27/json-to-figma/json02.png" alt="同步後"></p>
+<p><strong>執行前後對比</strong>：</p>
+<ul>
+<li><strong>同步前</strong>：僅有靜態佔位符。</li>
+<li><strong>同步後</strong>：實現 API 資料即時渲染，方便調整字型大小、間距等細節。</li>
+</ul>
+<hr>
+<h4 id="進階功能介紹"><a href="#進階功能介紹" class="headerlink" title="進階功能介紹"></a><strong>進階功能介紹</strong></h4><h4 id="1-根據-JSON-結構抓取資料"><a href="#1-根據-JSON-結構抓取資料" class="headerlink" title="1. 根據 JSON 結構抓取資料"></a><strong>1. 根據 JSON 結構抓取資料</strong></h4><ul>
+<li><strong>Root</strong>：選擇 JSON 主 key，插入對應 value。</li>
+<li><strong>Random Order</strong>：可設定同步資料是否隨機排列（不隨機、一般順序、隨機順序）。</li>
+<li><strong>Restrict Range</strong>：限制生成的資料筆數。例如，JSON 有 100 筆資料，可設最大生成筆數為 100（含以下）。</li>
+</ul>
+<h4 id="2-應用場景"><a href="#2-應用場景" class="headerlink" title="2. 應用場景"></a><strong>2. 應用場景</strong></h4><ul>
+<li><strong>隨機模式應用</strong>：測試設計對不同資料組合的適配性（如名稱長度或特殊字符）。</li>
+<li><strong>筆數限制應用</strong>：適合製作小型樣本進行快速迭代。</li>
+</ul>
+<p><img src="/2024/12/27/json-to-figma/json04.png" alt="進階功能"></p>
+<hr>
+<h4 id="相關資源"><a href="#相關資源" class="headerlink" title="相關資源"></a><strong>相關資源</strong></h4><ul>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=_J9BOFBOgqA">寶可夢卡牌同步</a></li>
+</ul>
 
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-        <img src="/2020/03/16/Website/ec-18.jpg" alt="Thumbnail">
     
-</a>
+    <a class="pull-right" href="/2024/12/11/figma-plugin/">
+        Figma-plugins 「google sync sheet」 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
 </div>
-<!---添加結束-->
-                            
-                              <h4 class="title"><a href="/2020/03/16/Website/">e-commerce Website</a></h4>
-                            
-                            <p><time datetime="2020-03-16T08:23:56.000Z"><a href="/2020/03/16/Website/">2020-03-16</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
-        </div>
-    </div>
-</section> 
-
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>Thanks for visit here</p>
-        </div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
